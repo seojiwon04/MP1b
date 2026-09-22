@@ -11,8 +11,6 @@ namespace EscapeRoom.ARInterface
         public CanvasGroup panelGroup;
 
         public InputActionReference exitAction;
-        // public UnityEvent onEnteredAR = new UnityEvent();
-        // public UnityEvent onExitedAR = new UnityEvent();
 
         public bool IsInAR { get; private set; }
 
@@ -56,7 +54,6 @@ namespace EscapeRoom.ARInterface
             Shader.SetGlobalFloat(Glasses, 0);
             panelGroup.alpha = 0f;
             panelCanvas.gameObject.SetActive(false);
-            // onExitedAR.Invoke();
         }
 
         public void ToggleAR() 

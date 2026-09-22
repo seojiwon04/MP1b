@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "StartMenu",
+    "maps": [
+        {
+            "name": "StartMenu",
+            "id": "8bac349f-1df2-45dd-878a-afda2b7e3dd9",
+            "actions": [
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "011cc341-9c06-452b-bf25-b12bac729c80",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "6634a45f-1c4a-4e5e-8cb5-bd5436b99e3a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a3fd7418-3309-4fcf-aabd-1108d1e04f91",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e4ddc68-65b5-4e6d-b454-1b90c7194be9",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -9,7 +9,6 @@ public class ItemManager : MonoBehaviour
     [SerializeField] private List<GameObject> prefabs = new();
     [SerializeField] private Transform spawnPoint;
     public InputActionReference takeOutAction;
-    private InputAction action;
     private List<string> items = new();
 
     void TakeOutItem()
@@ -22,10 +21,10 @@ public class ItemManager : MonoBehaviour
     void Start()
     {
         takeOutAction.action.Enable();
-        takeOutAction.action.performed += OnExitPerformed;
+        takeOutAction.action.performed += Performed;
     }
 
-    private void OnExitPerformed(InputAction.CallbackContext context)
+    private void Performed(InputAction.CallbackContext context)
     {
         TakeOutItem();
     }

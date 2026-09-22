@@ -2,7 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
+[DefaultExecutionOrder(-10000)]
 public class PersistentPlayerSpawnReset : MonoBehaviour
 {
     public XROrigin xrOrigin;
@@ -17,11 +19,15 @@ public class PersistentPlayerSpawnReset : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
+            // A duplicate must not disable the shared action assets used by the surviving rig.
+            foreach (var manager in GetComponentsInChildren<InputActionManager>(true))
+                manager.actionAssets = new System.Collections.Generic.List<UnityEngine.InputSystem.InputActionAsset>();
             gameObject.SetActive(false);
             Destroy(gameObject);
             return;
         }
 
+        if (!xrOrigin) xrOrigin = GetComponentInChildren<XROrigin>(true);
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -46,8 +52,7 @@ public class PersistentPlayerSpawnReset : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // if (mode != LoadSceneMode.Single)
-        //     return;
+        if (instance != this || mode != LoadSceneMode.Single) return;
 
         CancelPendingSpawn();
         SpawnPoint destination = null;
@@ -62,9 +67,7 @@ public class PersistentPlayerSpawnReset : MonoBehaviour
             }
         }
 
-        pendingSpawn = StartCoroutine(SpawnAfterLoad(
-            destination.transform.position,
-            Quaternion.Euler(0f, destination.transform.eulerAngles.y, 0f)));
+        pendingSpawn = StartCoroutine(SpawnAfterLoad(destination));
     }
 
     private void CancelPendingSpawn()
@@ -76,12 +79,27 @@ public class PersistentPlayerSpawnReset : MonoBehaviour
         pendingSpawn = null;
     }
 
-    private IEnumerator SpawnAfterLoad(Vector3 position, Quaternion rotation)
+    private IEnumerator SpawnAfterLoad(SpawnPoint destination)
     {
         yield return null;
 
         pendingSpawn = null;
-        ResetPlayerToSpawn(position, rotation);
+        // Wait until the outgoing scene and duplicate player have completed OnDisable.
+        foreach (var manager in GetComponentsInChildren<InputActionManager>(true))
+            if (manager.isActiveAndEnabled) manager.EnableInput();
+
+        if (!destination)
+        {
+            Debug.LogWarning("Scene has no active SpawnPoint; retaining the player position.", this);
+            yield break;
+        }
+        if (!xrOrigin || !xrOrigin.Origin || !xrOrigin.Camera)
+        {
+            Debug.LogError("Persistent Player needs its XR Origin and Camera assigned.", this);
+            yield break;
+        }
+        ResetPlayerToSpawn(destination.transform.position,
+            Quaternion.Euler(0f, destination.transform.eulerAngles.y, 0f));
     }
 
     private void ResetPlayerToSpawn(Vector3 spawnPosition, Quaternion spawnRotation)

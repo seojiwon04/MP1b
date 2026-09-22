@@ -22,6 +22,9 @@ namespace EscapeRoom.Inventory
         
         private Dictionary<string, GameObject> prefabMap = new();
 
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetStatics() => Inventory = null;
+
         private void Awake()
         {
             if (Inventory == null)
@@ -31,13 +34,20 @@ namespace EscapeRoom.Inventory
             }
             else
             {
+                gameObject.SetActive(false);
                 Destroy(gameObject);
+                return;
             }
 
             foreach (ItemPrefab item in itemPrefabs)
             {
                 prefabMap.Add(item.itemId, item.prefab);
             }
+        }
+
+        private void OnDestroy()
+        {
+            if (Inventory == this) Inventory = null;
         }
 
         public void AddItem(string itemId)
