@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - Desk
+  - Pen Drawer
+  - Sticky Note Drawer
+  - Scissors Drawer
+  - Pencil Drawer
+  - Pen Key
+  - Pencil Key
+  - Sticky Note Key
+  - Scissors Key
   layers:
   - Default
   - TransparentFX
