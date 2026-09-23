@@ -1,0 +1,7 @@
+newmtl WallNeutral
+Ka 0.2 0.2 0.2
+Kd 0.75 0.75 0.75
+Ks 0.0 0.0 0.0
+Ns 0.0
+d 1.0
+illum 1
