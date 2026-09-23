@@ -13,6 +13,10 @@ TagManager:
   - Pencil Key
   - Sticky Note Key
   - Scissors Key
+  - Red
+  - Green
+  - Purple
+  - Teal
   layers:
   - Default
   - TransparentFX
