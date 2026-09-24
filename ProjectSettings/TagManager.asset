@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Desk
+  - Pen Drawer
+  - Sticky Note Drawer
+  - Scissors Drawer
+  - Pencil Drawer
+  - Pen Key
+  - Pencil Key
+  - Sticky Note Key
+  - Scissors Key
+  - Red
+  - Green
+  - Purple
+  - Teal
   layers:
   - Default
   - TransparentFX

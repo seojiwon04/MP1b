@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.XR.Interaction.Toolkit.Interactables; // XRI 2.x: use UnityEngine.XR.Interaction.Toolkit instead
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using TMPro;
 
 public class DrawerKeyMechanism : MonoBehaviour
 {
@@ -15,14 +16,25 @@ public class DrawerKeyMechanism : MonoBehaviour
 
     public string keyTag;
 
-    bool opened = false;
+    public bool opened = false;
+    public FinalUnlockManager manager;
+    public TextMeshProUGUI locksRemainingText;
+
+    public bool debugMode = false;
+
+    public void DEBUG_OPEN()
+    {
+        if (debugMode && !opened)
+        {
+            opened = true;
+            StartCoroutine(slideOpen());
+        }
+    }
 
     void OnTriggerStay(Collider other)
     {
-        Debug.Log(name + " touched by " + other.name + " (rb: " + (other.attachedRigidbody ? other.attachedRigidbody.name + ", tag " + other.attachedRigidbody.tag : "none") + "), looking for " + keyTag);
-        if (opened || keyTag == null || !other.CompareTag(keyTag)) return;
-        Debug.Log("Hi");
-        if (openKey.GetComponent<XRGrabInteractable>().isSelected) return;
+        if (opened || !other.attachedRigidbody.CompareTag(keyTag)) return; // if box already opened or wrong key, do nothing
+        if (openKey.GetComponent<XRGrabInteractable>().isSelected) return; // if still grabbed, wait till released
         opened = true;
         Debug.Log("DrawerKeyMechanism: " + other.name + " has opened the box!");
         openKey.GetComponent<Rigidbody>().isKinematic = true;
@@ -47,6 +59,8 @@ public class DrawerKeyMechanism : MonoBehaviour
         }
 
         hiddenKey.GetComponent<Rigidbody>().isKinematic = false;
+        manager.locksRemaining++;
+        locksRemainingText.text = "Locks\n\n" + manager.locksRemaining + "/5";
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -71,13 +85,11 @@ public class DrawerKeyMechanism : MonoBehaviour
         {
             keyTag = "Sticky Note Key";
         }
-
-        Debug.Log("DrawerKeyMechanism: drawerTag = " + drawerTag + ", keyTag = " + keyTag);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (debugMode) DEBUG_OPEN();
     }
 }
