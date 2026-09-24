@@ -19,6 +19,7 @@ namespace EscapeRoom.Inventory
         public Transform spawnPoint;
 
         public List<string> items = new();
+        public event System.Action ItemsChanged;
         
         private Dictionary<string, GameObject> prefabMap = new();
 
@@ -53,6 +54,7 @@ namespace EscapeRoom.Inventory
         public void AddItem(string itemId)
         {
             items.Add(itemId);
+            ItemsChanged?.Invoke();
         }
 
         public bool HasItem(string itemId)
@@ -62,7 +64,7 @@ namespace EscapeRoom.Inventory
 
         public void RemoveItem(string itemId)
         {
-            items.Remove(itemId);
+            if (items.Remove(itemId)) ItemsChanged?.Invoke();
         }
 
         public void TakeOutItem(string itemId)
@@ -76,3 +78,4 @@ namespace EscapeRoom.Inventory
         }
     }
 }
+
