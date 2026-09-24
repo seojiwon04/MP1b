@@ -58,6 +58,12 @@ namespace EscapeRoom.Baseball
         public void EnterThrowingMode()
         {
             if (IsInThrowingMode) return;
+            if (!fireLeft || fireLeft.action == null || !fireRight || fireRight.action == null ||
+                !exitMode || exitMode.action == null)
+            {
+                Debug.LogError("Assign Fire Left, Fire Right, and Exit Mode input actions.", this);
+                return;
+            }
 
             leftHand = rightHand = null;
 
@@ -105,9 +111,9 @@ namespace EscapeRoom.Baseball
 
         private void UnbindActions()
         {
-            leftAction.performed -= OnLeftPerformed;
-            rightAction.performed -= OnRightPerformed;
-            exitAction.performed -= OnExitPerformed;
+            if (leftAction != null) leftAction.performed -= OnLeftPerformed;
+            if (rightAction != null) rightAction.performed -= OnRightPerformed;
+            if (exitAction != null) exitAction.performed -= OnExitPerformed;
 
             foreach (var action in enabledActions)
                 action.Disable();
@@ -236,9 +242,11 @@ namespace EscapeRoom.Baseball
 
         private void SetStatus(bool active)
         {
+            if (!status) return;
             status.text = active
                 ? "THROW MODE\nTRIGGER: FIRE   B: EXIT"
                 : "BASEBALLS\nAIM + TRIGGER TO START";
         }
     }
 }
+

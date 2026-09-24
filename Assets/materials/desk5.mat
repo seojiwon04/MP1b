@@ -42,6 +42,6 @@ Material:
     m_Floats: []
     m_Colors:
     - _BaseColor: {r: 0.6081393, g: 0.43137252, b: 1, a: 1}
-    - _Color: {r: 0.6081393, g: 0.43137246, b: 1, a: 1}
+    - _Color: {r: 0.6081393, g: 0.43137252, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
