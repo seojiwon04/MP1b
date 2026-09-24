@@ -77,7 +77,9 @@ namespace EscapeRoom.Inventory
             "COMPUTER_LAB" => "Lab Keycard",
             "TROPHY" => "Trophy",
             "TEST_ITEM" => "Practice Item",
+            "YELLOW_SCISSOR" => "Yellow Scissors",
             _ => id.Replace('_', ' ')
         };
     }
 }
+        

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEditor.XR.LegacyInputHelpers;
 
 [DefaultExecutionOrder(-10000)]
 public class PersistentPlayerSpawnReset : MonoBehaviour

@@ -25,4 +25,5 @@ public class SwitchSceneManager : MonoBehaviour
     public void SwitchToLab() => SwitchScene("ComputerLab");
     public void SwitchToOutdoor() => SwitchScene("Outdoor");
     public void SwitchToMainRoom() => SwitchScene("MainRoom");
+    public void SwitchToClassRoom() => SwitchScene("Classroom");
 }
