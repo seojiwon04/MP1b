@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainRoom.unity
+    guid: 702f44bb238c4d849bfce09ad178428a
+  - enabled: 1
+    path: Assets/Scenes/Outdoor.unity
+    guid: d94ea950476d3d64eaa7e09e753c4436
+  - enabled: 1
+    path: Assets/Scenes/ComputerLab.unity
+    guid: 74b2d5b2c223b7e48a546d2abe88d1aa
+  - enabled: 1
     path: Assets/Scenes/Classroom.unity
     guid: 1dabaa7d424bfd54b9699ce458f0a01e
   m_configObjects:
