@@ -78,6 +78,7 @@ namespace EscapeRoom.Inventory
             "TROPHY" => "Trophy",
             "TEST_ITEM" => "Practice Item",
             "YELLOW_SCISSOR" => "Yellow Scissors",
+            "STAR" => "Star",
             _ => id.Replace('_', ' ')
         };
     }

@@ -6858,6 +6858,14 @@ PrefabInstance:
       propertyPath: m_TextStyleHashCode
       value: -1183493901
       objectReference: {fileID: 0}
+    - target: {fileID: 2753131848390685274, guid: 035bef8d5c94e144eb7b4b63ccff4ed1, type: 3}
+      propertyPath: keyItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753131848390685274, guid: 035bef8d5c94e144eb7b4b63ccff4ed1, type: 3}
+      propertyPath: 'keyItems.Array.data[2]'
+      value: STAR
+      objectReference: {fileID: 0}
     - target: {fileID: 4312267292326617852, guid: 035bef8d5c94e144eb7b4b63ccff4ed1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -25822,6 +25830,14 @@ PrefabInstance:
       propertyPath: m_TextStyleHashCode
       value: -1183493901
       objectReference: {fileID: 0}
+    - target: {fileID: 2753131848390685274, guid: 035bef8d5c94e144eb7b4b63ccff4ed1, type: 3}
+      propertyPath: keyItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753131848390685274, guid: 035bef8d5c94e144eb7b4b63ccff4ed1, type: 3}
+      propertyPath: 'keyItems.Array.data[2]'
+      value: STAR
+      objectReference: {fileID: 0}
     - target: {fileID: 4312267292326617852, guid: 035bef8d5c94e144eb7b4b63ccff4ed1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -42641,8 +42657,8 @@ MonoBehaviour:
     prefab: {fileID: 6791157020158905039, guid: e476ac1a715ac794d97000873dfb299a, type: 3}
   - itemId: TEST_ITEM
     prefab: {fileID: 3973017045899613281, guid: 2e6951b581c796a48820e5e8ab4a5a4d, type: 3}
-  - itemId: YELLOW_SCISSOR
-    prefab: {fileID: 4555937890848990673, guid: 164be66700c671740a8c137be634f948, type: 3}
+  - itemId: STAR
+    prefab: {fileID: 2562715478756156068, guid: c03c4d3ae59a4aa4389dbcff50e773b3, type: 3}
   spawnPoint: {fileID: 1005978073}
   items: []
 --- !u!114 &2019028327
