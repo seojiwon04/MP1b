@@ -6999,9 +6999,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 543814135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6813aba3bdd060343888e4063bcae864, type: 3}
+  m_Script: {fileID: 11500000, guid: bc4968440dcdc224db36676af51f6c23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToFinalRoom
+  m_EditorClassIdentifier: Assembly-CSharp::ToCombinedLock
 --- !u!1 &547363329
 GameObject:
   m_ObjectHideFlags: 0
