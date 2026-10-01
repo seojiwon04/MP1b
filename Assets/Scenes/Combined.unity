@@ -678,9 +678,6 @@ PrefabInstance:
       addedObject: {fileID: 54181497}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 54181501}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 54181502}
   m_SourcePrefab: {fileID: 100100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
 --- !u!1 &54181496 stripped
@@ -714,20 +711,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
   m_PrefabInstance: {fileID: 54181495}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &54181501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54181496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9d92dd9c269a1418731c94f2e778f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeskKeySpot
-  key: {fileID: 0}
-  manager: {fileID: 0}
 --- !u!64 &54181502
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -857,9 +840,6 @@ PrefabInstance:
       addedObject: {fileID: 79951593}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 79951597}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 79951598}
   m_SourcePrefab: {fileID: 100100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
 --- !u!1 &79951592 stripped
@@ -893,20 +873,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
   m_PrefabInstance: {fileID: 79951591}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &79951597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79951592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9d92dd9c269a1418731c94f2e778f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeskKeySpot
-  key: {fileID: 0}
-  manager: {fileID: 0}
 --- !u!64 &79951598
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1444,6 +1410,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1274613429753140, guid: 8ed98682b80ff42ab98f07d7972ad00f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 311301626}
+    - targetCorrespondingSourceObject: {fileID: 1274613429753140, guid: 8ed98682b80ff42ab98f07d7972ad00f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 311301628}
   m_SourcePrefab: {fileID: 100100000, guid: 8ed98682b80ff42ab98f07d7972ad00f, type: 3}
 --- !u!1 &311301625 stripped
 GameObject:
@@ -1607,6 +1576,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &311301628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311301625}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14863285, y: 0.0994504, z: 0.19857839}
+  m_Center: {x: 0.000067684814, y: 0.035352167, z: -0.003943757}
 --- !u!65 &402717797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1709,9 +1699,6 @@ PrefabInstance:
       addedObject: {fileID: 424095722}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 424095726}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 424095727}
   m_SourcePrefab: {fileID: 100100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
 --- !u!1 &424095721 stripped
@@ -1745,20 +1732,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
   m_PrefabInstance: {fileID: 424095720}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &424095726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424095721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9d92dd9c269a1418731c94f2e778f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeskKeySpot
-  key: {fileID: 0}
-  manager: {fileID: 0}
 --- !u!64 &424095727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2302,7 +2275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderedDeskKeySpot
   key: {fileID: 311301625}
-  manager: {fileID: 0}
+  manager: {fileID: 1707640759}
   order: 3
 --- !u!1001 &637795473
 PrefabInstance:
@@ -2386,6 +2359,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1690718150433878, guid: 99d4c8645da7e43e8ac08906d7ec2948, type: 3}
       insertIndex: -1
       addedObject: {fileID: 637795475}
+    - targetCorrespondingSourceObject: {fileID: 1793034754385738, guid: 99d4c8645da7e43e8ac08906d7ec2948, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 637795480}
+    - targetCorrespondingSourceObject: {fileID: 1972076535144910, guid: 99d4c8645da7e43e8ac08906d7ec2948, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 637795479}
   m_SourcePrefab: {fileID: 100100000, guid: 99d4c8645da7e43e8ac08906d7ec2948, type: 3}
 --- !u!1 &637795474 stripped
 GameObject:
@@ -2549,6 +2528,58 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!1 &637795477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972076535144910, guid: 99d4c8645da7e43e8ac08906d7ec2948, type: 3}
+  m_PrefabInstance: {fileID: 637795473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &637795478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1793034754385738, guid: 99d4c8645da7e43e8ac08906d7ec2948, type: 3}
+  m_PrefabInstance: {fileID: 637795473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &637795479
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637795477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.18930525, y: 0.100728236, z: 0.03474509}
+  m_Center: {x: -0.0442885, y: 0.06751923, z: -0.0000000037252903}
+--- !u!65 &637795480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637795478}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24379608, y: 0.08715478, z: 0.06628515}
+  m_Center: {x: -0.013643932, y: 0.04526447, z: 0.00000004656613}
 --- !u!1 &696688639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,7 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderedDeskKeySpot
   key: {fileID: 1046502473}
-  manager: {fileID: 0}
+  manager: {fileID: 1707640759}
   order: 2
 --- !u!1001 &824574159
 PrefabInstance:
@@ -2905,9 +2936,6 @@ PrefabInstance:
       addedObject: {fileID: 824574161}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 824574165}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 824574166}
   m_SourcePrefab: {fileID: 100100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
 --- !u!1 &824574160 stripped
@@ -2941,20 +2969,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
   m_PrefabInstance: {fileID: 824574159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &824574165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824574160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9d92dd9c269a1418731c94f2e778f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeskKeySpot
-  key: {fileID: 0}
-  manager: {fileID: 0}
 --- !u!64 &824574166
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3104,6 +3118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1136636736618064, guid: dcf95e79ad6374967a2db77e1bd6f67a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 876741481}
+    - targetCorrespondingSourceObject: {fileID: 1136636736618064, guid: dcf95e79ad6374967a2db77e1bd6f67a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 876741483}
   m_SourcePrefab: {fileID: 100100000, guid: dcf95e79ad6374967a2db77e1bd6f67a, type: 3}
 --- !u!1 &876741480 stripped
 GameObject:
@@ -3267,6 +3284,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &876741483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876741480}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.27461824, y: 0.090204075, z: 0.058493804}
+  m_Center: {x: 0.00030866265, y: 0.045402877, z: 0}
 --- !u!1 &901299623
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,6 +3985,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1092955811730672, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1046502474}
+    - targetCorrespondingSourceObject: {fileID: 1248770748347862, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1046502482}
+    - targetCorrespondingSourceObject: {fileID: 1622651603250778, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1046502481}
+    - targetCorrespondingSourceObject: {fileID: 1608710512931506, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1046502480}
   m_SourcePrefab: {fileID: 100100000, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
 --- !u!1 &1046502473 stripped
 GameObject:
@@ -4110,6 +4157,84 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!1 &1046502476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1608710512931506, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
+  m_PrefabInstance: {fileID: 1046502472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1046502477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622651603250778, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
+  m_PrefabInstance: {fileID: 1046502472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1046502478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1248770748347862, guid: 9c0c4382708774729b07ab6af5f87162, type: 3}
+  m_PrefabInstance: {fileID: 1046502472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1046502480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046502476}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15750003, y: 0.19827393, z: 0.11635059}
+  m_Center: {x: 0, y: 0.00071919704, z: -0.000618726}
+--- !u!65 &1046502481
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046502477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.13066836, y: 0.1044578, z: 0.065791}
+  m_Center: {x: 0, y: 0.06892525, z: 0.033526015}
+--- !u!65 &1046502482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046502478}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.059916988, y: 0.12986252, z: 0.04214266}
+  m_Center: {x: 0, y: -0.031443823, z: -0.0765277}
 --- !u!1 &1206530208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,7 +4478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderedDeskKeySpot
   key: {fileID: 637795474}
-  manager: {fileID: 0}
+  manager: {fileID: 1707640759}
   order: 0
 --- !u!64 &1323008751
 MeshCollider:
@@ -4630,7 +4755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderedDeskKeySpot
   key: {fileID: 876741480}
-  manager: {fileID: 0}
+  manager: {fileID: 1707640759}
   order: 1
 --- !u!64 &1597664091
 MeshCollider:
